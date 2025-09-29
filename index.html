@@ -6,7 +6,6 @@
   <title>ElectroReuse - Platform Jual Beli Elektronik Bekas</title>
   <meta name="description" content="Tempat terbaik untuk jual beli elektronik bekas berkualitas dengan harga terjangkau, garansi 30 hari, dan quality check">
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
@@ -24,9 +23,10 @@
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
             <div>
-                <a href="#masuk" class="btn btn-primary">Masuk</a>
-                <a href="#daftar" class="btn btn-primary">Daftar</a>
+                <a href="#masuk" id="btn-masuk" class="btn btn-primary">Masuk</a>
+                <a href="#daftar" id="btn-daftar" class="btn btn-primary">Daftar</a>
             </div>
+
         </nav>
     </header>
 
@@ -36,110 +36,151 @@
         <section id="beranda">
             <h2>Temukan Elektronik Bekas Berkualitas</h2>
             <p>Dapatkan smartphone, laptop, kamera, dan gadget bekas hingga 60% lebih murah!</p>
-        <form role="search">
-            <input type="search" placeholder="Cari produk elektronik..." aria-label="Cari produk elektronik">
-            <select aria-label="Pilih kategori">
-            <option value="">Semua Kategori</option>
-            <option value="smartphone">Smartphone</option>
-            <option value="laptop">Laptop & Komputer</option>
-            <option value="tv">TV & Audio</option>
-            <option value="kamera">Kamera</option>
-            <option value="game">Konsol Game</option>
-            <option value="lainnya">Elektronik Lainnya</option>
-            </select>
-            <button  class="btn btn-secondary">Cari</button>
-        </form>
+            <form role="search">
+                <input type="search" placeholder="Cari produk elektronik..." aria-label="Cari produk elektronik">
+                <select aria-label="Pilih kategori">
+                    <option value="">Semua Kategori</option>
+                    <option value="Elektronik Rumah Tangga">Elektronik Rumah Tangga</option>
+                    <option value="Gadget & Komunikasi">Gadget & Komunikasi</option>
+                    <option value="Hiburan & Audio">Hiburan & Audio</option>
+                    <option value="Elektronik Dapur">Elektronik Dapur</option>
+                </select>
+                <button class="btn btn-secondary">Cari</button>
+            </form>
         </section>
 
-            <!-- KATEGORI -->
         <div class="container">
+            <!-- KATEGORI -->
             <section id="kategori">
                 <h2>Kategori</h2>
-                <p>Pilihan dari berbagai kategori elektronik bekas berkualitas tinggi</p>
-                <div>
-                    <article class="card">
-                        <img src="img/Smartphone.jpeg" alt="Smartphone berbagai merek" width="350" height="250">
-                        <h3>Smartphone</h3>
-                        <p>iPhone, Samsung, Xiaomi, dan lainnya dengan kondisi prima</p>
-                        <p>Mulai dari Rp 1.500.000</p>
+                <p>Pilih kategori sesuai kebutuhan</p>
+                <div class="kategori-list">
+                    <article class="card kategori-utama" 
+                    data-sub="Televisi, Kulkas, Mesin Cuci, AC, Kipas Angin">
+                    <h3>📺 Elektronik Rumah Tangga</h3>
                     </article>
 
-                    <article class="card">
-                        <img src="img/Laptop.jpeg" alt="Laptop berbagai merek" width="350" height="250">
-                        <h3>Laptop & Komputer</h3>
-                        <p>MacBook, ThinkPad, Gaming Laptop performa tinggi</p>
-                        <p>Mulai dari Rp 3.500.000</p>
+                    <article class="card kategori-utama" 
+                    data-sub="Smartphone, Tablet, Laptop, Smartwatch, Aksesoris">
+                    <h3>📱 Gadget & Komunikasi</h3>
                     </article>
 
-                    <article class="card">
-                        <img src="img/TV.jpeg" alt="TV LED" width="350" height="250">
-                        <h3>TV & Audio</h3>
-                        <p>Smart TV, Speaker Premium, Home Theater</p>
-                        <p>Mulai dari Rp 2.000.000</p>
+                    <article class="card kategori-utama" 
+                    data-sub="Speaker, Headset, Home Theater, Microphone, Radio">
+                    <h3>🎧 Hiburan & Audio</h3>
                     </article>
 
-                    <article class="card">
-                        <img src="img/Kamera.jpeg" alt="Kamera DSLR dan Mirrorless" width="350" height="250">
-                        <h3>Kamera</h3>
-                        <p>DSLR, Mirrorless, Action Cam</p>
-                        <p>Mulai dari Rp 4.000.000</p>
+                    <article class="card kategori-utama" 
+                    data-sub="Monitor, Keyboard, Mouse, Printer, Harddisk / SSD eksternal">
+                    <h3>🖥️ Komputer & Periferal</h3>
                     </article>
 
-                    <article class="card">
-                        <img src="img/Konsul_Game.jpeg" alt="Konsol Game" width="350" height="250">
-                        <h3>Konsol Game</h3>
-                        <p>PlayStation, Xbox, Nintendo Switch</p>
-                        <p>Mulai dari Rp 2.500.000</p>
-                    </article>
-
-                    <article class="card">
-                        <img src="img/Tablet.jpeg" alt="Tablet" width="350" height="250">
-                        <h3>Tablet</h3>
-                        <p>iPad, Samsung Tab, Surface</p>
-                        <p>Mulai dari Rp 1.800.000</p>
+                    <article class="card kategori-utama" 
+                    data-sub="Blender, Rice Cooker, Microwave, Oven Listrik, Dispenser">
+                    <h3>🍳 Elektronik Dapur</h3>
                     </article>
                 </div>
             </section>
 
+
             <!-- PRODUK TERBARU -->
             <section id="produk-terbaru">
-                <h2>Produk Terbaru</h2>
+                <h2>Produk</h2>
                 <div>
-                    <article class="card card-featured">
-                        <img src="img/iPhone_12_ProMax.jpeg" alt="iPhone 12 Pro Max bekas" width="350" height="250">
-                        <h3>iPhone 12 Pro Max 128GB</h3>
-                        <p>Kondisi: 95% • Garansi 30 hari</p>
-                        <p><strong>Rp 8.500.000</strong></p>
-                        <p>Jakarta Selatan</p>
-                        <p>(4.8) • 127 review</p>
-                    </article>
-
-                    <article class="card card-featured">
-                        <img src="img/Laptop_Dell_XPS.jpeg" alt="Laptop Dell XPS 13 bekas" width="350" height="250">
-                        <h3>Dell XPS 13 2020 - i7</h3>
-                        <p>Kondisi: 90% • Quality Checked ✓</p>
-                        <p><strong>Rp 7.200.000</strong></p>
-                        <p>Bandung</p>
-                        <p>(4.9) • 89 review</p>
-                    </article>
-
-                    <article class="card card-featured">
-                        <img src="img/Samsung_Smart.jpeg" alt="Samsung Smart TV 55 inch" width="350" height="250">
+                    <!-- Produk 3 -->
+                    <article class="card" data-category="Elektronik Rumah Tangga">
+                        <img src="img/Samsung_Smart.jpeg" alt="Samsung Smart TV 55 inch">
                         <h3>Samsung Smart TV 55" 4K</h3>
-                        <p>Kondisi: 85% • Gratis Ongkir</p>
-                        <p><strong>Rp 4.800.000</strong></p>
-                        <p>Surabaya</p>
-                        <p>(4.7) • 156 review</p>
+                        <p class="detail" style="display:none;">Kondisi: 85% • Gratis Ongkir | Rp 4.800.000 | Surabaya</p>
                     </article>
 
-                    <article class="card card-featured">
-                        <img src="img/Kamera_Canon_EOS_R.jpeg" alt="Kamera Canon EOS R" width="350" height="250">
-                        <h3>Canon EOS R + Lens Kit 24-105mm</h3>
-                        <p>Kondisi: 92% • Shutter Count: 15K</p>
-                        <p><strong>Rp 15.000.000</strong></p>
-                        <p>Jakarta Utara</p>
-                        <p>(4.9) • 73 review</p>
+                    <!-- Produk 3 -->
+                    <article class="card" data-category="Elektronik Rumah Tangga">
+                        <img src="img/Kulkas.jpeg" alt="Kulkas POLYTRON Side by Side 2">
+                        <h3>Kulkas POLYTRON Side by Side 2</h3>
+                        <p class="detail" style="display:none;">Kondisi: 80% • Quality Checked ✓ | Rp 8.600.000 | Samarinda</p>
                     </article>
+
+                    <!-- Produk 3 -->
+                    <article class="card" data-category="Elektronik Rumah Tangga">
+                        <img src="img/AC.jpeg" alt="AC LG Standart New Hercules [1 PK]">
+                        <h3>AC LG Standart New Hercules [1 PK]</h3>
+                        <p class="detail" style="display:none;">Kondisi: 87% • Gratis Ongkir | Rp 1.800.000 | Yogyakarta</p>
+                    </article>
+
+                    <article class="card" data-category="Gadget & Komunikasi">
+                        <img src="img/iPhone_12_ProMax.jpeg" alt="iPhone 12 Pro Max">
+                        <h3>iPhone 12 Pro Max 128GB</h3>
+                        <p class="detail" style="display:none;">Kondisi: 95% • Garansi 30 hari | Rp 8.500.000 | Jakarta Selatan</p>
+                    </article>
+
+                    <article class="card" data-category="Gadget & Komunikasi">
+                        <img src="img/Laptop_Dell_XPS.jpeg" alt="Laptop Dell XPS 13">
+                        <h3>Laptop Dell XPS 13 2020 - i7</h3>
+                        <p class="detail" style="display:none;">Kondisi: 90% • Quality Checked ✓ | Rp 7.200.000 | Bandung</p>
+                    </article>
+
+                    <article class="card" data-category="Gadget & Komunikasi">
+                        <img src="img/Smartwatch.jpeg" alt="Smartwatch Bluetooth">
+                        <h3>Smartwatch Bluetooth</h3>
+                        <p class="detail" style="display:none;">Kondisi: 90% • Gratis Ongkir | Rp 200.000 | Sukabumi</p>
+                    </article>
+
+                    <article class="card" data-category="Hiburan & Audio">
+                        <img src="img/Speaker.jpeg" alt="Proel EX-12P - Speaker Passive">
+                        <h3>Proel EX-12P - Speaker Passive</h3>
+                        <p class="detail" style="display:none;">Kondisi: 70% • Gratis Ongkir | Rp 800.000 | Jakarta</p>
+                    </article>
+
+                    <article class="card" data-category="Hiburan & Audio">
+                        <img src="img/Radio.jpeg" alt="Portable Radio AE1850/00 Philips">
+                        <h3>Portable Radio AE1850/00 Philips</h3>
+                        <p class="detail" style="display:none;">Kondisi: 80% • Gratis Ongkir | Rp 400.000 | Makasar</p>
+                    </article>
+
+                    <article class="card" data-category="Hiburan & Audio">
+                        <img src="img/Mikrofon.jpeg" alt="Mikrofon Dinamis USB XLR FEELWORLD PM1 Pink">
+                        <h3>Mikrofon Dinamis USB XLR FEELWORLD PM1 Pink</h3>
+                        <p class="detail" style="display:none;">Kondisi: 91% • Gratis Ongkir | Rp 100.000 | Bali</p>
+                    </article>
+
+                    <article class="card" data-category="Komputer & Periferal">
+                        <img src="img/Mouse.jpeg" alt="ASUS Wireless Silent Mouse MW103">
+                        <h3>ASUS Wireless Silent Mouse MW103</h3>
+                        <p class="detail" style="display:none;">Kondisi: 81% • Gratis Ongkir | Rp 225.000 | Bali</p>
+                    </article>
+
+                    <article class="card" data-category="Komputer & Periferal">
+                        <img src="img/Keyboard.jpeg" alt="Mechanical Gaming Keyboard - HX Red">
+                        <h3>Mechanical Gaming Keyboard - HX Red</h3>
+                        <p class="detail" style="display:none;">Kondisi: 89% • Gratis Ongkir | Rp 750.000 | Malang</p>
+                    </article>
+
+                    <article class="card" data-category="Komputer & Periferal">
+                        <img src="img/Printer.jpeg" alt="Printer Epson L3250 Multifungsi Printer Wifi">
+                        <h3>Printer Epson L3250 Multifungsi Printer Wifi</h3>
+                        <p class="detail" style="display:none;">Kondisi: 91% • Gratis Ongkir | Rp 1.250.000 | Bali</p>
+                    </article>
+
+                    <article class="card" data-category="Elektronik Dapur">
+                        <img src="img/Blender.jpeg" alt="Moderna Black Blender">
+                        <h3>Moderna Black Blender</h3>
+                        <p class="detail" style="display:none;">Kondisi: 85% • Gratis Ongkir | Rp 650.000 | Solo</p>
+                    </article>
+
+                    <article class="card" data-category="Elektronik Dapur">
+                        <img src="img/RiceCooker.jpeg" alt="MIYAKO - RICE COOKER MANUAL 1.8Liter ">
+                        <h3>MIYAKO - RICE COOKER MANUAL 1.8Liter </h3>
+                        <p class="detail" style="display:none;">Kondisi: 98% • Gratis Ongkir | Rp 475.000 | Palangkaraya</p>
+                    </article>
+
+                    <article class="card" data-category="Elektronik Dapur">
+                        <img src="img/Oven.jpeg" alt="Oven Listrik M20A">
+                        <h3>Oven Listrik M20A</h3>
+                        <p class="detail" style="display:none;">Kondisi: 87% • Gratis Ongkir | Rp 550.000 | Palembang</p>
+                    </article>
+
+                    <!-- Tambahkan produk lain dengan format yang sama -->
                 </div>
             </section>
 
@@ -148,28 +189,27 @@
                 <h2>ElectroReuse dalam Angka</h2>
                 <div class="stats-container">
                     <div class="stat-box">
-                    <div class="icon">📦</div>
-                    <h3>50,000+</h3>
-                    <p>Produk Terjual</p>
+                        <div class="icon">📦</div>
+                        <h3>50,000+</h3>
+                        <p>Produk Terjual</p>
                     </div>
                     <div class="stat-box">
-                    <div class="icon">👥</div>
-                    <h3>25,000+</h3>
-                    <p>Pengguna Aktif</p>
+                        <div class="icon">👥</div>
+                        <h3>25,000+</h3>
+                        <p>Pengguna Aktif</p>
                     </div>
                     <div class="stat-box">
-                    <div class="icon">👍</div>
-                    <h3>98%</h3>
-                    <p>Tingkat Kepuasan</p>
+                        <div class="icon">👍</div>
+                        <h3>98%</h3>
+                        <p>Tingkat Kepuasan</p>
                     </div>
                     <div class="stat-box">
-                    <div class="icon">⭐</div>
-                    <h3>4.9/5</h3>
-                    <p>Rating Platform</p>
+                        <div class="icon">⭐</div>
+                        <h3>4.9/5</h3>
+                        <p>Rating Platform</p>
                     </div>
                 </div>
             </section>
-
 
             <!-- TESTIMONI -->
             <section id="testimoni">
@@ -204,37 +244,52 @@
         </div>
     </aside>
 
+    <!-- WEATHER -->
+        <div class="container">
+            <section class="weather-section card">
+                <h3>🌦️ Info Cuaca</h3>
+                <form id="weather-form">
+                    <input type="text" id="city-input" placeholder="Masukkan nama kota..." required>
+                    <button type="submit" class="btn btn-primary">Cek Cuaca</button>
+                </form>
+
+                <div id="weather-info" class="weather-result">
+                    🌤️ Silakan masukkan kota untuk melihat cuaca.
+                </div>
+            </section>
+        </div>
+
     <!-- FOOTER -->
     <footer>
-        <div class="footer-grid">
+         <div class="footer-grid">
             <section>
-            <h4>Ikuti Kami</h4>
-            <ul>
-                <li><a href="#facebook">Facebook</a></li>
-                <li><a href="#instagram">Instagram</a></li>
-                <li><a href="#twitter">Twitter</a></li>
-                <li><a href="#youtube">YouTube</a></li>
-                <li><a href="#tiktok">TikTok</a></li>
-            </ul>
+                <h4>Ikuti Kami</h4>
+                <ul>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#youtube">YouTube</a></li>
+                    <li><a href="#tiktok">TikTok</a></li>
+                </ul>
             </section>
 
             <section id="kontak">
-            <h4>Hubungi Kami</h4>
-            <address>
-                <p><a href="mailto:jenitaputri25062006@gmail.com">jenitaputri25062006@gmail.com</a></p>
-                <p><a href="tel:+62895412818444">+62 895 4128 18444</a></p>
-                <p><a href="https://wa.me/62895412818444" target="_blank">WhatsApp Chat</a></p>
-                <p>Jl. Sambaliung No.9, Kampus Gunung Kulua,<br>Kota Samarinda 75119</p>
-            </address>
+                <h4>Hubungi Kami</h4>
+                <address>
+                    <p><a href="mailto:jenitaputri25062006@gmail.com">jenitaputri25062006@gmail.com</a></p>
+                    <p><a href="tel:+62895412818444">+62 895 4128 18444</a></p>
+                    <p><a href="https://wa.me/62895412818444" target="_blank">WhatsApp Chat</a></p>
+                    <p>Jl. Sambaliung No.9, Kampus Gunung Kulua,<br>Kota Samarinda 75119</p>
+                </address>
             </section>
 
             <section>
-            <h4>Referensi Desain</h4>
-            <ul>
-                <li><a href="https://www.olx.co.id/" target="_blank">OLX Indonesia</a></li>
-                <li><a href="https://www.tokopedia.com/" target="_blank">Tokopedia</a></li>
-                <li><a href="https://www.bukalapak.com/" target="_blank">Bukalapak</a></li>
-            </ul>
+                <h4>Referensi Desain</h4>
+                <ul>
+                    <li><a href="https://www.olx.co.id/" target="_blank">OLX Indonesia</a></li>
+                    <li><a href="https://www.tokopedia.com/" target="_blank">Tokopedia</a></li>
+                    <li><a href="https://www.bukalapak.com/" target="_blank">Bukalapak</a></li>
+                </ul>
             </section>
         </div>
 
@@ -242,5 +297,8 @@
             <p>&copy; 2025 <strong>ElectroReuse</strong>. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Load External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
