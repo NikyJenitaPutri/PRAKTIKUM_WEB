@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+// Cek apakah user sudah login
+$user = isset($_SESSION['username']) ? $_SESSION['username'] : null;
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -22,11 +29,18 @@
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
-            <div>
-                <a href="#masuk" id="btn-masuk" class="btn btn-primary">Masuk</a>
-                <a href="#daftar" id="btn-daftar" class="btn btn-primary">Daftar</a>
+            <div class="button-area"> 
+                <?php if ($user): ?> 
+                    <a href="login.php" class="btn btn-primary">Login</a> 
+                    <a href="logout.php" class="btn btn-primary">Logout</a> 
+                    <a href="dashboard.php" class="btn btn-primary">Dashboard</a> 
+                    <button id="toggle-dark" class="btn btn-secondary">Dark Mode</button>
+                <?php else: ?> 
+                    <a href="login.php" class="btn btn-primary">Login</a> 
+                    <a href="dashboard.php" class="btn btn-primary">Dashboard</a> 
+                    <button id="toggle-dark" class="btn btn-secondary">Dark Mode</button>
+                <?php endif; ?> 
             </div>
-
         </nav>
     </header>
 
